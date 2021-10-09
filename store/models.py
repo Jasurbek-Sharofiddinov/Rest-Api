@@ -38,6 +38,8 @@ class Customer(models.Model):
 	birth_date=models.DateTimeField(null=True)
 	membership=models.CharField(max_length=1,choices=membership_choices,default='B ')
 
+
+
 class Order(models.Model):
 	customer=models.ForeignKey(Customer,on_delete=models.PROTECT)
 	payment_status_choices=[
